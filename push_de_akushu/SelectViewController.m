@@ -38,14 +38,14 @@
 {
     NSLog(@"Start Sending");
     SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
-    emailMessage.fromEmail = @"ttt.ttt.7733@gmail.com"; //送信者メールアドレス（Gmailのアカウント）
+    emailMessage.fromEmail = @"pushdeakushu@gmail.com"; //送信者メールアドレス（Gmailのアカウント）
     emailMessage.toEmail = email;                //宛先メールアドレス
     //emailMessage.ccEmail =@"cc@address";             //ccメールアドレス
     //emailMessage.bccEmail =@"bcc@address";         //bccメールアドレス
     emailMessage.requiresAuth = YES;
     emailMessage.relayHost = @"smtp.gmail.com";
-    emailMessage.login = @"ttt.ttt.7733@gmail.com";         //ユーザ名（Gmailのアカウント）
-    emailMessage.pass = @"uwck2u4t";                       //パスワード（Gmailのアカウント）
+    emailMessage.login = @"pushdeakushu@gmail.com";         //ユーザ名（Gmailのアカウント）
+    emailMessage.pass = @"funkey123";                       //パスワード（Gmailのアカウント）
     //2段階認証プロセスを利用する場合、アプリパスワードを使用する
     emailMessage.subject =@"件名に記載する内容";
     emailMessage.wantsSecure = YES;
