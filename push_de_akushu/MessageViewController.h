@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SKPSMTPMessage.h"
+#import "NSData+Base64Additions.h"
 
-@interface MessageViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface MessageViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate,SKPSMTPMessageDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property(nonatomic, strong) UITapGestureRecognizer *singleTap;
 

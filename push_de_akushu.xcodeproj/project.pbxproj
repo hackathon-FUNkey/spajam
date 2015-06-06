@@ -22,6 +22,9 @@
 		883150991B239FC100B8B12F /* rogo_test_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 883150981B239FC100B8B12F /* rogo_test_black.png */; };
 		8831509C1B23A21F00B8B12F /* haikei_menu_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8831509A1B23A21F00B8B12F /* haikei_menu_2.png */; };
 		8831509D1B23A21F00B8B12F /* sorry_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8831509B1B23A21F00B8B12F /* sorry_test.png */; };
+		883150B11B23B21700B8B12F /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 883150AC1B23B21700B8B12F /* SVIndefiniteAnimatedView.m */; };
+		883150B21B23B21700B8B12F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 883150AE1B23B21700B8B12F /* SVProgressHUD.bundle */; };
+		883150B31B23B21700B8B12F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 883150B01B23B21700B8B12F /* SVProgressHUD.m */; };
 		889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A51B22EDA4006DDE40 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A71B22EDA4006DDE40 /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -65,6 +68,12 @@
 		883150981B239FC100B8B12F /* rogo_test_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rogo_test_black.png; sourceTree = "<group>"; };
 		8831509A1B23A21F00B8B12F /* haikei_menu_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haikei_menu_2.png; sourceTree = "<group>"; };
 		8831509B1B23A21F00B8B12F /* sorry_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sorry_test.png; sourceTree = "<group>"; };
+		883150AB1B23B21700B8B12F /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		883150AC1B23B21700B8B12F /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		883150AD1B23B21700B8B12F /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		883150AE1B23B21700B8B12F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		883150AF1B23B21700B8B12F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		883150B01B23B21700B8B12F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		889401A41B22EDA4006DDE40 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
 		889401A51B22EDA4006DDE40 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
 		889401A61B22EDA4006DDE40 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 		4A43056F1B22CEA8006432CB /* push_de_akushu */ = {
 			isa = PBXGroup;
 			children = (
+				883150AA1B23B21700B8B12F /* SVProgressHUD */,
 				8831508D1B23507A00B8B12F /* image */,
 				889401A31B22EDA4006DDE40 /* SMTPLibrary */,
 				4A4305741B22CEA8006432CB /* AppDelegate.h */,
@@ -180,6 +190,19 @@
 				883150911B23507A00B8B12F /* top.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		883150AA1B23B21700B8B12F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				883150AB1B23B21700B8B12F /* SVIndefiniteAnimatedView.h */,
+				883150AC1B23B21700B8B12F /* SVIndefiniteAnimatedView.m */,
+				883150AD1B23B21700B8B12F /* SVProgressHUD-Prefix.pch */,
+				883150AE1B23B21700B8B12F /* SVProgressHUD.bundle */,
+				883150AF1B23B21700B8B12F /* SVProgressHUD.h */,
+				883150B01B23B21700B8B12F /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		889401A31B22EDA4006DDE40 /* SMTPLibrary */ = {
@@ -289,6 +312,7 @@
 				883150951B23507A00B8B12F /* top.png in Resources */,
 				4A4305811B22CEA8006432CB /* LaunchScreen.xib in Resources */,
 				4A43057E1B22CEA8006432CB /* Images.xcassets in Resources */,
+				883150B21B23B21700B8B12F /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,10 +335,12 @@
 				4A4305981B22CF12006432CB /* TopViewController.m in Sources */,
 				889401B11B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m in Sources */,
 				4A4305761B22CEA8006432CB /* AppDelegate.m in Sources */,
+				883150B31B23B21700B8B12F /* SVProgressHUD.m in Sources */,
 				889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */,
 				889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */,
 				4A43059B1B22CF25006432CB /* SelectViewController.m in Sources */,
 				889401B21B22EDA4006DDE40 /* SKPSMTPMessage.m in Sources */,
+				883150B11B23B21700B8B12F /* SVIndefiniteAnimatedView.m in Sources */,
 				4A4305731B22CEA8006432CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
