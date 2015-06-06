@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Top View Controller-->
@@ -12,8 +12,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" id="ORV-TU-fnc">
+                                <rect key="frame" x="-5" y="0.0" width="326" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E3z-ds-usW">
-                                <rect key="frame" x="137" y="394" width="46" height="30"/>
+                                <rect key="frame" x="142" y="502" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,13 +26,17 @@
                                     <segue destination="A8z-x3-CKL" kind="modal" id="1XI-bz-E5a"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top.png" id="vbC-rQ-ECm">
+                                <rect key="frame" x="19" y="97" width="285" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234.66666666666666" y="368.25333333333333"/>
+            <point key="canvasLocation" x="156" y="322"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="Hgf-UY-h84">
@@ -38,19 +46,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ETv-rT-uMg">
-                                <rect key="frame" x="35" y="359" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" id="FQM-7u-ZMw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2nz-ee-VOz">
+                                <rect key="frame" x="-83" y="335" width="486" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="send_mails_test.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="AdressButtonAction:" destination="A8z-x3-CKL" eventType="touchUpInside" id="ohe-5Z-uhr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2nz-ee-VOz">
-                                <rect key="frame" x="35" y="453" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ETv-rT-uMg">
+                                <rect key="frame" x="-95" y="197" width="511" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="send_line_test.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="LineButtonAction:" destination="A8z-x3-CKL" eventType="touchUpInside" id="1Zx-mO-r5Z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,12 +76,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4o-Si-jLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580.26666666666665" y="299.14666666666665"/>
+            <point key="canvasLocation" x="671" y="322"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="Cdb-b6-IKb">
             <objects>
-                <viewController id="067-o7-Ejr" customClass="MessageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Message" id="067-o7-Ejr" customClass="MessageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXH-P3-Qf8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,9 +90,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uL-KT-eKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963.73333333333335" y="299.14666666666665"/>
+            <point key="canvasLocation" x="1080" y="307"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="haikei_4.png" width="750" height="1334"/>
+        <image name="send_line_test.png" width="400" height="200"/>
+        <image name="send_mails_test.png" width="400" height="200"/>
+        <image name="top.png" width="360" height="531"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
