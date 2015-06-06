@@ -7,6 +7,7 @@
 //
 
 #import "MessageViewController.h"
+#import "SVProgressHUD.h"
 
 @interface MessageViewController ()
 
@@ -98,6 +99,9 @@ const int maxScore = 10;
 -(void) sendEmailInBackground
 {
     NSLog(@"Start Sending");
+    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"メール送信中・・・" maskType:SVProgressHUDMaskTypeGradient];
+
     SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
     emailMessage.fromEmail = @"pushdeakushu@gmail.com"; //送信者メールアドレス（Gmailのアカウント）
     emailMessage.toEmail = @"b1012187@fun.ac.jp";                //宛先メールアドレス
@@ -122,10 +126,8 @@ const int maxScore = 10;
 // E-Mail送信成功時にCallされる（成功時の処理をコーディングする）
 -(void)messageSent:(SKPSMTPMessage *)message
 {
-    NSLog(@"Gmail送信完了");
-    //アラート表示
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gmail送信完了" message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-    [alert show];
+    [SVProgressHUD dismiss];
+    [SVProgressHUD showSuccessWithStatus:@"メール送信完了"];
 }
 
 // 送信エラー時にCallされる（エラー時の処理をコーディングする）

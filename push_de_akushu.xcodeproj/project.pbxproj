@@ -19,6 +19,10 @@
 		883150931B23507A00B8B12F /* send_line_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8831508F1B23507A00B8B12F /* send_line_test.png */; };
 		883150941B23507A00B8B12F /* send_mails_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 883150901B23507A00B8B12F /* send_mails_test.png */; };
 		883150951B23507A00B8B12F /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 883150911B23507A00B8B12F /* top.png */; };
+		883150A51B23AAA900B8B12F /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 883150A01B23AAA900B8B12F /* SVIndefiniteAnimatedView.m */; };
+		883150A61B23AAA900B8B12F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 883150A21B23AAA900B8B12F /* SVProgressHUD.bundle */; };
+		883150A71B23AAA900B8B12F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 883150A41B23AAA900B8B12F /* SVProgressHUD.m */; };
+		883150A91B23AAD100B8B12F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883150A81B23AAD100B8B12F /* QuartzCore.framework */; };
 		889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A51B22EDA4006DDE40 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A71B22EDA4006DDE40 /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -59,6 +63,13 @@
 		8831508F1B23507A00B8B12F /* send_line_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_line_test.png; sourceTree = "<group>"; };
 		883150901B23507A00B8B12F /* send_mails_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_mails_test.png; sourceTree = "<group>"; };
 		883150911B23507A00B8B12F /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
+		8831509F1B23AAA900B8B12F /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		883150A01B23AAA900B8B12F /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		883150A11B23AAA900B8B12F /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		883150A21B23AAA900B8B12F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		883150A31B23AAA900B8B12F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		883150A41B23AAA900B8B12F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		883150A81B23AAD100B8B12F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		889401A41B22EDA4006DDE40 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
 		889401A51B22EDA4006DDE40 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
 		889401A61B22EDA4006DDE40 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
@@ -80,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883150A91B23AAD100B8B12F /* QuartzCore.framework in Frameworks */,
 				889401B51B22F4C5006DDE40 /* AddressBook.framework in Frameworks */,
 				889401B61B22F4C5006DDE40 /* AddressBookUI.framework in Frameworks */,
 			);
@@ -98,6 +110,7 @@
 		4A4305641B22CEA8006432CB = {
 			isa = PBXGroup;
 			children = (
+				883150A81B23AAD100B8B12F /* QuartzCore.framework */,
 				889401B31B22F4C5006DDE40 /* AddressBook.framework */,
 				889401B41B22F4C5006DDE40 /* AddressBookUI.framework */,
 				4A43056F1B22CEA8006432CB /* push_de_akushu */,
@@ -118,6 +131,7 @@
 		4A43056F1B22CEA8006432CB /* push_de_akushu */ = {
 			isa = PBXGroup;
 			children = (
+				8831509E1B23AAA900B8B12F /* SVProgressHUD */,
 				8831508D1B23507A00B8B12F /* image */,
 				889401A31B22EDA4006DDE40 /* SMTPLibrary */,
 				4A4305741B22CEA8006432CB /* AppDelegate.h */,
@@ -171,6 +185,20 @@
 				883150911B23507A00B8B12F /* top.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		8831509E1B23AAA900B8B12F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8831509F1B23AAA900B8B12F /* SVIndefiniteAnimatedView.h */,
+				883150A01B23AAA900B8B12F /* SVIndefiniteAnimatedView.m */,
+				883150A11B23AAA900B8B12F /* SVProgressHUD-Prefix.pch */,
+				883150A21B23AAA900B8B12F /* SVProgressHUD.bundle */,
+				883150A31B23AAA900B8B12F /* SVProgressHUD.h */,
+				883150A41B23AAA900B8B12F /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = SMTPLibrary/SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		889401A31B22EDA4006DDE40 /* SMTPLibrary */ = {
@@ -273,6 +301,7 @@
 				883150941B23507A00B8B12F /* send_mails_test.png in Resources */,
 				4A43057C1B22CEA8006432CB /* Main.storyboard in Resources */,
 				883150921B23507A00B8B12F /* haikei_4.png in Resources */,
+				883150A61B23AAA900B8B12F /* SVProgressHUD.bundle in Resources */,
 				883150931B23507A00B8B12F /* send_line_test.png in Resources */,
 				883150951B23507A00B8B12F /* top.png in Resources */,
 				4A4305811B22CEA8006432CB /* LaunchScreen.xib in Resources */,
@@ -299,10 +328,12 @@
 				4A4305981B22CF12006432CB /* TopViewController.m in Sources */,
 				889401B11B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m in Sources */,
 				4A4305761B22CEA8006432CB /* AppDelegate.m in Sources */,
+				883150A71B23AAA900B8B12F /* SVProgressHUD.m in Sources */,
 				889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */,
 				889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */,
 				4A43059B1B22CF25006432CB /* SelectViewController.m in Sources */,
 				889401B21B22EDA4006DDE40 /* SKPSMTPMessage.m in Sources */,
+				883150A51B23AAA900B8B12F /* SVIndefiniteAnimatedView.m in Sources */,
 				4A4305731B22CEA8006432CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
