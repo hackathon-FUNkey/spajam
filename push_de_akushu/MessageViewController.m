@@ -17,7 +17,7 @@ NSMutableArray *messageArray;
 NSArray *positiveMessage;
 NSArray *negativeMessage;
 int score;
-const int maxScore = 30;
+const int maxScore = 10;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +30,7 @@ const int maxScore = 30;
     messageArray = [NSMutableArray array];
     positiveMessage = [NSArray arrayWithObjects:@"ごめん", @"反省", @"仲直り", @"和解", nil];
     negativeMessage = [NSArray arrayWithObjects:@"嫌い", @"ない", @"ムカつく", @"この野郎", nil];
-    score = 0;
+    score = 9;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)targetTextField {
@@ -42,7 +42,10 @@ const int maxScore = 30;
     for(int i = 0; i < [positiveMessage count]; i++) {
         if([[messageArray objectAtIndex:[messageArray count] - 1] rangeOfString: [positiveMessage objectAtIndex:i]].location != NSNotFound) {
             NSLog(@"succcess");
-            score += 5;
+            score += 1;
+            if(score>=maxScore){
+                [self sendEmailInBackground];
+            }
         } else {
             NSLog(@"fail");
         }
@@ -91,6 +94,52 @@ const int maxScore = 30;
      returningResponse:nil error:nil];
     //[[UIApplication sharedApplication] openURL:url];
 }
+
+-(void) sendEmailInBackground
+{
+    NSLog(@"Start Sending");
+    SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
+    emailMessage.fromEmail = @"pushdeakushu@gmail.com"; //送信者メールアドレス（Gmailのアカウント）
+    emailMessage.toEmail = @"b1012187@fun.ac.jp";                //宛先メールアドレス
+    // emailMessage.toEmail = email;                //宛先メールアドレス
+    
+    //emailMessage.ccEmail =@"cc@address";             //ccメールアドレス
+    //emailMessage.bccEmail =@"bcc@address";         //bccメールアドレス
+    emailMessage.requiresAuth = YES;
+    emailMessage.relayHost = @"smtp.gmail.com";
+    emailMessage.login = @"pushdeakushu@gmail.com";         //ユーザ名（Gmailのアカウント）
+    emailMessage.pass = @"funkey123";                       //パスワード（Gmailのアカウント）
+    //2段階認証プロセスを利用する場合、アプリパスワードを使用する
+    emailMessage.subject =@"件名に記載する内容";
+    emailMessage.wantsSecure = YES;
+    emailMessage.delegate = self;
+    NSString *messageBody = @"メール本文に記載する内容";
+    NSDictionary *plainMsg = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey, messageBody,kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
+    emailMessage.parts = [NSArray arrayWithObjects:plainMsg,nil];
+    [emailMessage send];
+}
+
+// E-Mail送信成功時にCallされる（成功時の処理をコーディングする）
+-(void)messageSent:(SKPSMTPMessage *)message
+{
+    NSLog(@"Gmail送信完了");
+    //アラート表示
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gmail送信完了" message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+}
+
+// 送信エラー時にCallされる（エラー時の処理をコーディングする）
+-(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error
+{
+    NSLog(@"Gmail送信失敗 - error(%d): %@", [error code], [error localizedDescription]);
+    //アラート表示
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gmail送信失敗!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+}
+
+
+
+
 
 /*
  #pragma mark - Navigation
