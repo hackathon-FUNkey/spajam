@@ -34,4 +34,28 @@
 }
 */
 
+- (IBAction)LineButtonAction:(id)sender {
+    
+    NSString *lineString = @"LINEtest";
+    
+    NSString *contentKey = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                        NULL,
+                                                                                        (CFStringRef)lineString,
+                                                                                        NULL,
+                                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                                        kCFStringEncodingUTF8 );
+    
+    NSString *contentType = @"text";
+    
+    NSString *urlString = [NSString
+                           stringWithFormat: @"http://line.naver.jp/R/msg/%@/?%@",
+                           contentType, contentKey];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+      [[UIApplication sharedApplication] openURL:url];
+    
+}
+
+- (IBAction)AdressButtonAction:(id)sender {
+}
 @end

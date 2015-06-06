@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectViewController : UIViewController
+- (IBAction)LineButtonAction:(id)sender;
+- (IBAction)AdressButtonAction:(id)sender;
 
 @end
