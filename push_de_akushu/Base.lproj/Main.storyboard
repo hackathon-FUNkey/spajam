@@ -38,24 +38,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2nz-ee-VOz">
-                                <rect key="frame" x="108" y="460" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="連絡先から選択">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="AdressButtonAction:" destination="A8z-x3-CKL" eventType="touchUpInside" id="ohe-5Z-uhr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ETv-rT-uMg">
-                                <rect key="frame" x="103" y="361" width="115" height="30"/>
+                                <rect key="frame" x="108" y="243" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="LINEから選択">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="LineButtonAction:" destination="A8z-x3-CKL" eventType="touchUpInside" id="1Zx-mO-r5Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2nz-ee-VOz">
+                                <rect key="frame" x="113" y="350" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="連絡先から選択">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AdressButtonAction:" destination="A8z-x3-CKL" eventType="touchUpInside" id="ohe-5Z-uhr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,7 +69,7 @@
         <!--Message View Controller-->
         <scene sceneID="Cdb-b6-IKb">
             <objects>
-                <viewController id="067-o7-Ejr" customClass="MessageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Message" id="067-o7-Ejr" customClass="MessageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXH-P3-Qf8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

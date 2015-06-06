@@ -7,6 +7,7 @@
 //
 
 #import "SelectViewController.h"
+#import "MessageViewController.h"
 
 @interface SelectViewController ()
 
@@ -133,8 +134,12 @@
         // メールアドレスは1件だけ
         email = (__bridge NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
         NSLog(@"email = %@", email);
-        [self sendEmailInBackground];
+      //  [self sendEmailInBackground];
         [self dismissModalViewControllerAnimated:YES];
+        MessageViewController *messageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
+        [self presentViewController: messageVC animated:YES completion: nil];
+        
+        
         return NO;
     }
 }
