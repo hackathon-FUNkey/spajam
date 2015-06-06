@@ -15,7 +15,6 @@
 		4A43058D1B22CEA9006432CB /* push_de_akushuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43058C1B22CEA9006432CB /* push_de_akushuTests.m */; };
 		4A4305981B22CF12006432CB /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305971B22CF12006432CB /* TopViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4A43059B1B22CF25006432CB /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43059A1B22CF25006432CB /* SelectViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4A43059E1B22CF34006432CB /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43059D1B22CF34006432CB /* MessageViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		883150921B23507A00B8B12F /* haikei_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8831508E1B23507A00B8B12F /* haikei_4.png */; };
 		883150931B23507A00B8B12F /* send_line_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 8831508F1B23507A00B8B12F /* send_line_test.png */; };
 		883150941B23507A00B8B12F /* send_mails_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 883150901B23507A00B8B12F /* send_mails_test.png */; };
@@ -27,6 +26,7 @@
 		889401B21B22EDA4006DDE40 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401B51B22F4C5006DDE40 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B31B22F4C5006DDE40 /* AddressBook.framework */; };
 		889401B61B22F4C5006DDE40 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B41B22F4C5006DDE40 /* AddressBookUI.framework */; };
+		8B1294BA1B2368FB00F84F64 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1294B91B2368FB00F84F64 /* MessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 		4A4305971B22CF12006432CB /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 		4A4305991B22CF25006432CB /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
 		4A43059A1B22CF25006432CB /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
-		4A43059C1B22CF34006432CB /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
-		4A43059D1B22CF34006432CB /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		8831508E1B23507A00B8B12F /* haikei_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haikei_4.png; sourceTree = "<group>"; };
 		8831508F1B23507A00B8B12F /* send_line_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_line_test.png; sourceTree = "<group>"; };
 		883150901B23507A00B8B12F /* send_mails_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_mails_test.png; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
 		889401B31B22F4C5006DDE40 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		889401B41B22F4C5006DDE40 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		8B1294B81B2368FB00F84F64 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		8B1294B91B2368FB00F84F64 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,8 @@
 				4A4305971B22CF12006432CB /* TopViewController.m */,
 				4A4305991B22CF25006432CB /* SelectViewController.h */,
 				4A43059A1B22CF25006432CB /* SelectViewController.m */,
-				4A43059C1B22CF34006432CB /* MessageViewController.h */,
-				4A43059D1B22CF34006432CB /* MessageViewController.m */,
+				8B1294B81B2368FB00F84F64 /* MessageViewController.h */,
+				8B1294B91B2368FB00F84F64 /* MessageViewController.m */,
 				4A43057A1B22CEA8006432CB /* Main.storyboard */,
 				4A43057D1B22CEA8006432CB /* Images.xcassets */,
 				4A43057F1B22CEA8006432CB /* LaunchScreen.xib */,
@@ -294,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A43059E1B22CF34006432CB /* MessageViewController.m in Sources */,
+				8B1294BA1B2368FB00F84F64 /* MessageViewController.m in Sources */,
 				889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */,
 				4A4305981B22CF12006432CB /* TopViewController.m in Sources */,
 				889401B11B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m in Sources */,
@@ -429,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = push_de_akushu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = push_de_akushu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

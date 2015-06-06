@@ -79,18 +79,29 @@
             <point key="canvasLocation" x="671" y="322"/>
         </scene>
         <!--Message View Controller-->
-        <scene sceneID="Cdb-b6-IKb">
+        <scene sceneID="9EL-Ju-Lgh">
             <objects>
-                <viewController storyboardIdentifier="Message" id="067-o7-Ejr" customClass="MessageViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nXH-P3-Qf8">
+                <viewController storyboardIdentifier="Message" id="1JP-h0-uXE" customClass="MessageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vci-Kh-wnY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Ezt-Hs-YPG">
+                                <rect key="frame" x="0.0" y="269" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myTextField" destination="Ezt-Hs-YPG" id="6v6-Fh-oHM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3uL-KT-eKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjX-h2-1d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="307"/>
+            <point key="canvasLocation" x="1255" y="322"/>
         </scene>
     </scenes>
     <resources>

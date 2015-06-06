@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageViewController : UIViewController
+@interface MessageViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
+@property(nonatomic, strong) UITapGestureRecognizer *singleTap;
 
 @end
