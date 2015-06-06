@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "SKPSMTPMessage.h"
 #import "NSData+Base64Additions.h"
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 
 
 
-@interface SelectViewController : UIViewController<SKPSMTPMessageDelegate>{
-
+@interface SelectViewController : UIViewController<SKPSMTPMessageDelegate,ABPeoplePickerNavigationControllerDelegate>{
+NSString *email;
 }
+
+
 - (IBAction)LineButtonAction:(id)sender;
 - (IBAction)AdressButtonAction:(id)sender;
 

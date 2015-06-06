@@ -21,6 +21,8 @@
 		889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401B11B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401AB1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401B21B22EDA4006DDE40 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		889401B51B22F4C5006DDE40 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B31B22F4C5006DDE40 /* AddressBook.framework */; };
+		889401B61B22F4C5006DDE40 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B41B22F4C5006DDE40 /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		889401AB1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
 		889401AC1B22EDA4006DDE40 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
 		889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
+		889401B31B22F4C5006DDE40 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		889401B41B22F4C5006DDE40 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889401B51B22F4C5006DDE40 /* AddressBook.framework in Frameworks */,
+				889401B61B22F4C5006DDE40 /* AddressBookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,8 @@
 		4A4305641B22CEA8006432CB = {
 			isa = PBXGroup;
 			children = (
+				889401B31B22F4C5006DDE40 /* AddressBook.framework */,
+				889401B41B22F4C5006DDE40 /* AddressBookUI.framework */,
 				4A43056F1B22CEA8006432CB /* push_de_akushu */,
 				4A4305891B22CEA9006432CB /* push_de_akushuTests */,
 				4A43056E1B22CEA8006432CB /* Products */,

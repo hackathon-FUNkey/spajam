@@ -39,7 +39,7 @@
     NSLog(@"Start Sending");
     SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
     emailMessage.fromEmail = @"ttt.ttt.7733@gmail.com"; //送信者メールアドレス（Gmailのアカウント）
-    emailMessage.toEmail = @"b1012187@fun.ac.jp";                //宛先メールアドレス
+    emailMessage.toEmail = email;                //宛先メールアドレス
     //emailMessage.ccEmail =@"cc@address";             //ccメールアドレス
     //emailMessage.bccEmail =@"bcc@address";         //bccメールアドレス
     emailMessage.requiresAuth = YES;
@@ -79,6 +79,7 @@
 
 
 
+
 - (IBAction)LineButtonAction:(id)sender {
     
     NSString *lineString = @"LINEtest";
@@ -103,6 +104,40 @@
 
 - (IBAction)AdressButtonAction:(id)sender {
     
-    [self sendEmailInBackground];
+    //[self sendEmailInBackground];
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    [self presentViewController:picker animated:YES completion:nil];
 }
+
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    [self peoplePickerNavigationController:peoplePicker shouldContinueAfterSelectingPerson:person property:property identifier:identifier];
+}
+
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person
+{
+    [self peoplePickerNavigationController:peoplePicker shouldContinueAfterSelectingPerson:person];
+}
+
+//選択時処理
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    ABMutableMultiValueRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
+    if (ABMultiValueGetCount(multi)>1) {
+        // 複数メールアドレスがある
+        // メールアドレスのみ表示するようにする
+        [peoplePicker setDisplayedProperties:[NSArray arrayWithObject:[NSNumber numberWithInt:kABPersonEmailProperty]]];
+        return YES;
+    } else {
+        // メールアドレスは1件だけ
+        email = (__bridge NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
+        NSLog(@"email = %@", email);
+        [self sendEmailInBackground];
+        [self dismissModalViewControllerAnimated:YES];
+        return NO;
+    }
+}
+
+
 @end
