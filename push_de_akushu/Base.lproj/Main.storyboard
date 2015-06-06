@@ -1,58 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Top View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="TopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y9q-v0-Sbo"/>
+                        <viewControllerLayoutGuide type="bottom" id="DrK-1Z-83J"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" id="ORV-TU-fnc">
-                                <rect key="frame" x="-5" y="0.0" width="326" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ORV-TU-fnc">
+                                <rect key="frame" x="-5" y="0.0" width="606" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E3z-ds-usW">
-                                <rect key="frame" x="142" y="502" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rogo_test_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="vbC-rQ-ECm">
+                                <rect key="frame" x="19" y="30" width="565" height="473"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3z-ds-usW">
+                                <rect key="frame" x="101" y="376" width="400" height="245"/>
+                                <state key="normal" image="sorry_test.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="A8z-x3-CKL" kind="modal" id="1XI-bz-E5a"/>
+                                    <segue destination="A8z-x3-CKL" kind="presentation" id="1XI-bz-E5a"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top.png" id="vbC-rQ-ECm">
-                                <rect key="frame" x="19" y="97" width="285" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vbC-rQ-ECm" firstAttribute="centerX" secondItem="E3z-ds-usW" secondAttribute="centerX" id="1Mf-rm-Nz7"/>
+                            <constraint firstItem="vbC-rQ-ECm" firstAttribute="top" secondItem="y9q-v0-Sbo" secondAttribute="bottom" constant="10" id="1U9-8M-oPI"/>
+                            <constraint firstItem="ORV-TU-fnc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-21" id="5NG-9b-DUR"/>
+                            <constraint firstItem="vbC-rQ-ECm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="3" id="Lgf-Z8-TVm"/>
+                            <constraint firstItem="ORV-TU-fnc" firstAttribute="bottom" secondItem="DrK-1Z-83J" secondAttribute="top" id="Xac-Hp-ev0"/>
+                            <constraint firstItem="DrK-1Z-83J" firstAttribute="top" secondItem="vbC-rQ-ECm" secondAttribute="bottom" constant="97" id="dE1-ne-Mfs"/>
+                            <constraint firstItem="E3z-ds-usW" firstAttribute="top" secondItem="y9q-v0-Sbo" secondAttribute="bottom" constant="356" id="pCK-Hu-vSX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ORV-TU-fnc" secondAttribute="trailing" constant="-17" id="pM2-ft-rug"/>
+                            <constraint firstItem="ORV-TU-fnc" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="uWk-7X-gVs"/>
+                            <constraint firstItem="vbC-rQ-ECm" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="w5b-QR-Juy"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="E3z-ds-usW" secondAttribute="bottom" constant="-21" id="y7u-uV-8nB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="322"/>
+            <point key="canvasLocation" x="292.5" y="339"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="Hgf-UY-h84">
             <objects>
                 <viewController id="A8z-x3-CKL" customClass="SelectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kwH-Fw-xaK"/>
+                        <viewControllerLayoutGuide type="bottom" id="F3K-Iw-tnU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kyd-SR-LIs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" id="FQM-7u-ZMw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_menu_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-7u-ZMw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2nz-ee-VOz">
-                                <rect key="frame" x="-83" y="335" width="486" height="228"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nz-ee-VOz">
+                                <rect key="frame" x="-83" y="335" width="766" height="260"/>
                                 <state key="normal" image="send_mails_test.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,9 +77,11 @@
                                     <action selector="AdressButtonAction:" destination="A8z-x3-CKL" eventType="touchUpInside" id="ohe-5Z-uhr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ETv-rT-uMg">
-                                <rect key="frame" x="-95" y="197" width="511" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-rT-uMg">
+                                <rect key="frame" x="45" y="229" width="511" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="511" id="asM-q4-bil"/>
+                                </constraints>
                                 <state key="normal" image="send_line_test.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,28 +91,55 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2nz-ee-VOz" firstAttribute="leading" secondItem="kyd-SR-LIs" secondAttribute="leadingMargin" constant="-99" id="191-qF-4vt"/>
+                            <constraint firstItem="2nz-ee-VOz" firstAttribute="centerX" secondItem="FQM-7u-ZMw" secondAttribute="centerX" id="4xl-PV-tkA"/>
+                            <constraint firstItem="F3K-Iw-tnU" firstAttribute="top" secondItem="2nz-ee-VOz" secondAttribute="bottom" constant="5" id="DMn-TY-tyM"/>
+                            <constraint firstItem="FQM-7u-ZMw" firstAttribute="bottom" secondItem="F3K-Iw-tnU" secondAttribute="top" id="FHh-Wc-eJN"/>
+                            <constraint firstItem="2nz-ee-VOz" firstAttribute="top" secondItem="kwH-Fw-xaK" secondAttribute="bottom" constant="315" id="KAT-Yo-873"/>
+                            <constraint firstAttribute="trailing" secondItem="FQM-7u-ZMw" secondAttribute="trailing" id="LRx-qs-C8W"/>
+                            <constraint firstItem="ETv-rT-uMg" firstAttribute="centerX" secondItem="2nz-ee-VOz" secondAttribute="centerX" id="QIh-e3-eig"/>
+                            <constraint firstItem="FQM-7u-ZMw" firstAttribute="leading" secondItem="kyd-SR-LIs" secondAttribute="leading" id="lHs-52-JtZ"/>
+                            <constraint firstItem="F3K-Iw-tnU" firstAttribute="top" secondItem="ETv-rT-uMg" secondAttribute="bottom" constant="171" id="m65-Hs-Q2n"/>
+                            <constraint firstItem="FQM-7u-ZMw" firstAttribute="top" secondItem="kyd-SR-LIs" secondAttribute="top" id="nzR-qc-0LD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4o-Si-jLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="322"/>
+            <point key="canvasLocation" x="1258.125" y="340.14084507042253"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="9EL-Ju-Lgh">
             <objects>
                 <viewController storyboardIdentifier="Message" id="1JP-h0-uXE" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IHB-bc-lWC"/>
+                        <viewControllerLayoutGuide type="bottom" id="sAj-ac-Hjn"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vci-Kh-wnY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Ezt-Hs-YPG">
-                                <rect key="frame" x="0.0" y="269" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-o9-TNu">
+                                <rect key="frame" x="0.0" y="0.0" width="680" height="632"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezt-Hs-YPG">
+                                <rect key="frame" x="0.0" y="285" width="600" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ezt-Hs-YPG" firstAttribute="centerY" secondItem="vci-Kh-wnY" secondAttribute="centerY" id="Dnc-DN-EtM"/>
+                            <constraint firstAttribute="trailing" secondItem="Ezt-Hs-YPG" secondAttribute="trailing" id="HLO-QS-D9O"/>
+                            <constraint firstItem="Ezt-Hs-YPG" firstAttribute="leading" secondItem="vci-Kh-wnY" secondAttribute="leading" id="Qzp-C5-rE1"/>
+                            <constraint firstItem="2oF-o9-TNu" firstAttribute="leading" secondItem="Ezt-Hs-YPG" secondAttribute="leading" id="UMm-mV-PT0"/>
+                            <constraint firstItem="2oF-o9-TNu" firstAttribute="top" secondItem="vci-Kh-wnY" secondAttribute="top" id="obZ-j2-Hn6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2oF-o9-TNu" secondAttribute="bottom" constant="-32" id="omw-Og-7rA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2oF-o9-TNu" secondAttribute="trailing" constant="-96" id="sqf-Qb-Qag"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="myTextField" destination="Ezt-Hs-YPG" id="6v6-Fh-oHM"/>
@@ -101,18 +147,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjX-h2-1d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255" y="322"/>
+            <point key="canvasLocation" x="2352" y="340"/>
         </scene>
     </scenes>
     <resources>
         <image name="haikei_4.png" width="750" height="1334"/>
+        <image name="haikei_menu_2.png" width="750" height="1334"/>
+        <image name="rogo_test_black.png" width="750" height="1334"/>
         <image name="send_line_test.png" width="400" height="200"/>
         <image name="send_mails_test.png" width="400" height="200"/>
-        <image name="top.png" width="360" height="531"/>
+        <image name="sorry_test.png" width="400" height="200"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
