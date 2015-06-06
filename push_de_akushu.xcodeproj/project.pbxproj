@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A4305731B22CEA8006432CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305721B22CEA8006432CB /* main.m */; };
-		4A4305761B22CEA8006432CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305751B22CEA8006432CB /* AppDelegate.m */; };
+		4A4305731B22CEA8006432CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305721B22CEA8006432CB /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4A4305761B22CEA8006432CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305751B22CEA8006432CB /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4A43057C1B22CEA8006432CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A43057A1B22CEA8006432CB /* Main.storyboard */; };
 		4A43057E1B22CEA8006432CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A43057D1B22CEA8006432CB /* Images.xcassets */; };
 		4A4305811B22CEA8006432CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A43057F1B22CEA8006432CB /* LaunchScreen.xib */; };
 		4A43058D1B22CEA9006432CB /* push_de_akushuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43058C1B22CEA9006432CB /* push_de_akushuTests.m */; };
-		4A4305981B22CF12006432CB /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305971B22CF12006432CB /* TopViewController.m */; };
-		4A43059B1B22CF25006432CB /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43059A1B22CF25006432CB /* SelectViewController.m */; };
-		4A43059E1B22CF34006432CB /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43059D1B22CF34006432CB /* MessageViewController.m */; };
+		4A4305981B22CF12006432CB /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4305971B22CF12006432CB /* TopViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4A43059B1B22CF25006432CB /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43059A1B22CF25006432CB /* SelectViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4A43059E1B22CF34006432CB /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A43059D1B22CF34006432CB /* MessageViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A51B22EDA4006DDE40 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A71B22EDA4006DDE40 /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		889401B11B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401AB1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		889401B21B22EDA4006DDE40 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,16 @@
 		4A43059A1B22CF25006432CB /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		4A43059C1B22CF34006432CB /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		4A43059D1B22CF34006432CB /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		889401A41B22EDA4006DDE40 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		889401A51B22EDA4006DDE40 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
+		889401A61B22EDA4006DDE40 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		889401A71B22EDA4006DDE40 /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
+		889401A81B22EDA4006DDE40 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		889401AA1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		889401AB1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		889401AC1B22EDA4006DDE40 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +102,7 @@
 		4A43056F1B22CEA8006432CB /* push_de_akushu */ = {
 			isa = PBXGroup;
 			children = (
+				889401A31B22EDA4006DDE40 /* SMTPLibrary */,
 				4A4305741B22CEA8006432CB /* AppDelegate.h */,
 				4A4305751B22CEA8006432CB /* AppDelegate.m */,
 				4A4305961B22CF12006432CB /* TopViewController.h */,
@@ -127,6 +143,23 @@
 				4A43058B1B22CEA9006432CB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		889401A31B22EDA4006DDE40 /* SMTPLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				889401A41B22EDA4006DDE40 /* Base64Transcoder.h */,
+				889401A51B22EDA4006DDE40 /* Base64Transcoder.m */,
+				889401A61B22EDA4006DDE40 /* HSK_CFUtilities.h */,
+				889401A71B22EDA4006DDE40 /* HSK_CFUtilities.m */,
+				889401A81B22EDA4006DDE40 /* NSData+Base64Additions.h */,
+				889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */,
+				889401AA1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.h */,
+				889401AB1B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m */,
+				889401AC1B22EDA4006DDE40 /* SKPSMTPMessage.h */,
+				889401AD1B22EDA4006DDE40 /* SKPSMTPMessage.m */,
+			);
+			path = SMTPLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A43059E1B22CF34006432CB /* MessageViewController.m in Sources */,
+				889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */,
 				4A4305981B22CF12006432CB /* TopViewController.m in Sources */,
+				889401B11B22EDA4006DDE40 /* NSStream+SKPSMTPExtensions.m in Sources */,
 				4A4305761B22CEA8006432CB /* AppDelegate.m in Sources */,
+				889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */,
+				889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */,
 				4A43059B1B22CF25006432CB /* SelectViewController.m in Sources */,
+				889401B21B22EDA4006DDE40 /* SKPSMTPMessage.m in Sources */,
 				4A4305731B22CEA8006432CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SKPSMTPMessage.h"
+#import "NSData+Base64Additions.h"
 
-@interface SelectViewController : UIViewController
+
+
+@interface SelectViewController : UIViewController<SKPSMTPMessageDelegate>{
+
+}
 - (IBAction)LineButtonAction:(id)sender;
 - (IBAction)AdressButtonAction:(id)sender;
 
