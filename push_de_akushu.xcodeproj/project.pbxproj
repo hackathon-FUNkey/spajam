@@ -33,6 +33,7 @@
 		889401B51B22F4C5006DDE40 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B31B22F4C5006DDE40 /* AddressBook.framework */; };
 		889401B61B22F4C5006DDE40 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B41B22F4C5006DDE40 /* AddressBookUI.framework */; };
 		8B1294BA1B2368FB00F84F64 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1294B91B2368FB00F84F64 /* MessageViewController.m */; };
+		8B1294C31B23C66E00F84F64 /* MessageCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1294C21B23C66E00F84F64 /* MessageCheckViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		889401B41B22F4C5006DDE40 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		8B1294B81B2368FB00F84F64 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		8B1294B91B2368FB00F84F64 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		8B1294C11B23C66E00F84F64 /* MessageCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCheckViewController.h; sourceTree = "<group>"; };
+		8B1294C21B23C66E00F84F64 /* MessageCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCheckViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				4A43059A1B22CF25006432CB /* SelectViewController.m */,
 				8B1294B81B2368FB00F84F64 /* MessageViewController.h */,
 				8B1294B91B2368FB00F84F64 /* MessageViewController.m */,
+				8B1294C11B23C66E00F84F64 /* MessageCheckViewController.h */,
+				8B1294C21B23C66E00F84F64 /* MessageCheckViewController.m */,
 				4A43057A1B22CEA8006432CB /* Main.storyboard */,
 				4A43057D1B22CEA8006432CB /* Images.xcassets */,
 				4A43057F1B22CEA8006432CB /* LaunchScreen.xib */,
@@ -330,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1294C31B23C66E00F84F64 /* MessageCheckViewController.m in Sources */,
 				8B1294BA1B2368FB00F84F64 /* MessageViewController.m in Sources */,
 				889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */,
 				4A4305981B22CF12006432CB /* TopViewController.m in Sources */,
