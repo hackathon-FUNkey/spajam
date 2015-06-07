@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -30,6 +30,15 @@
                                 </state>
                                 <connections>
                                     <segue destination="A8z-x3-CKL" kind="presentation" id="1XI-bz-E5a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOg-hw-kG5">
+                                <rect key="frame" x="296" y="20" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3zB-rm-Ijv" kind="presentation" id="YZF-9D-CYk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,7 +130,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-o9-TNu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-o9-TNu">
                                 <rect key="frame" x="0.0" y="0.0" width="680" height="632"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezt-Hs-YPG">
@@ -129,19 +138,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jti-9A-wps">
+                                <rect key="frame" x="194" y="164" width="212" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="HAD-Qh-hgQ"/>
+                                    <constraint firstAttribute="width" constant="212" id="P8a-lw-4lO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zge-AE-AvR">
+                                <rect key="frame" x="16" y="40" width="568" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="7J9-9X-P2o"/>
+                                    <constraint firstAttribute="width" constant="393" id="kYz-Vc-zI2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7J9-9X-P2o"/>
+                                        <exclude reference="kYz-Vc-zI2"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="centerX" secondItem="jti-9A-wps" secondAttribute="centerX" id="1DH-nE-4Hj"/>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="centerY" secondItem="vci-Kh-wnY" secondAttribute="centerY" id="Dnc-DN-EtM"/>
                             <constraint firstAttribute="trailing" secondItem="Ezt-Hs-YPG" secondAttribute="trailing" id="HLO-QS-D9O"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="top" secondItem="IHB-bc-lWC" secondAttribute="bottom" constant="20" id="HRf-ov-Ga4"/>
+                            <constraint firstItem="jti-9A-wps" firstAttribute="top" secondItem="Zge-AE-AvR" secondAttribute="bottom" constant="77" id="HlO-3R-2Nv"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="top" secondItem="IHB-bc-lWC" secondAttribute="bottom" constant="20" id="QdE-vp-Ptk"/>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="leading" secondItem="vci-Kh-wnY" secondAttribute="leading" id="Qzp-C5-rE1"/>
-                            <constraint firstItem="2oF-o9-TNu" firstAttribute="leading" secondItem="Ezt-Hs-YPG" secondAttribute="leading" id="UMm-mV-PT0"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="leading" secondItem="vci-Kh-wnY" secondAttribute="leadingMargin" id="TWg-BT-XpQ"/>
+                            <constraint firstItem="Ezt-Hs-YPG" firstAttribute="top" secondItem="jti-9A-wps" secondAttribute="bottom" constant="8" symbolic="YES" id="Yat-10-OM0"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="centerX" secondItem="jti-9A-wps" secondAttribute="centerX" id="b4D-58-qOH"/>
+                            <constraint firstItem="jti-9A-wps" firstAttribute="centerX" secondItem="Ezt-Hs-YPG" secondAttribute="centerX" id="jki-bj-yXS"/>
                             <constraint firstItem="2oF-o9-TNu" firstAttribute="top" secondItem="vci-Kh-wnY" secondAttribute="top" id="obZ-j2-Hn6"/>
                             <constraint firstAttribute="bottomMargin" secondItem="2oF-o9-TNu" secondAttribute="bottom" constant="-32" id="omw-Og-7rA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2oF-o9-TNu" secondAttribute="trailing" constant="-96" id="sqf-Qb-Qag"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QdE-vp-Ptk"/>
+                                <exclude reference="b4D-58-qOH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="guageImageView" destination="Zge-AE-AvR" id="X5T-iC-7x7"/>
+                        <outlet property="myImageView" destination="jti-9A-wps" id="VZR-Ld-WDO"/>
                         <outlet property="myTextField" destination="Ezt-Hs-YPG" id="6v6-Fh-oHM"/>
                     </connections>
                 </viewController>
@@ -149,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="2050" y="334"/>
         </scene>
-        <!--View Controller-->
+        <!--Message Check View Controller-->
         <scene sceneID="8So-vU-RS1">
             <objects>
-                <viewController id="3zB-rm-Ijv" sceneMemberID="viewController">
+                <viewController id="3zB-rm-Ijv" customClass="MessageCheckViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P6I-s8-pwy"/>
                         <viewControllerLayoutGuide type="bottom" id="Jzb-eG-AlK"/>
@@ -160,8 +204,17 @@
                     <view key="view" contentMode="scaleToFill" id="z1J-QJ-Dyl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-LE-oFU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="XFs-LE-oFU" id="ncd-0q-2To"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohw-l3-mmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

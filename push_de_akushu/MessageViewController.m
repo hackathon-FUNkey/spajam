@@ -19,6 +19,7 @@ NSArray *positiveMessage;
 NSArray *negativeMessage;
 int score;
 const int maxScore = 10;
+NSArray *imageArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +33,26 @@ const int maxScore = 10;
     positiveMessage = [NSArray arrayWithObjects:@"ごめん", @"反省", @"仲直り", @"和解", nil];
     negativeMessage = [NSArray arrayWithObjects:@"嫌い", @"ない", @"ムカつく", @"この野郎", nil];
     score = 9;
+    
+    imageArray = [NSArray arrayWithObjects:@"move_hand00.png", @"move_hand01.png", @"move_hand02.png", @"move_hand03.png", @"move_hand04.png", @"move_hand05.png", nil];
+    
+    //UIImageを格納するNSMutableArrayを確保
+    NSMutableArray *uiImageArray = [NSMutableArray array];
+    //_imageArrayのイメージをuiImageArrayに追加
+    for(NSString *imageStr in imageArray) {
+        [uiImageArray addObject:[UIImage imageNamed:imageStr]];
+    }
+    
+    //self.myImageView.image = [UIImage imageNamed:@"move_hands00.png"];
+    
+    //uiImageArrayを_imageView.animationImagesにセット
+    self.myImageView.animationImages = uiImageArray;
+    self.myImageView.animationRepeatCount = 0;
+    self.myImageView.animationDuration = 1;
+    self.myImageView.userInteractionEnabled = YES;
+    [self.myImageView startAnimating];
+    
+    [self showGuageImage];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)targetTextField {
@@ -54,13 +75,14 @@ const int maxScore = 10;
     for(int i = 0; i < [negativeMessage count]; i++) {
         if([[messageArray objectAtIndex:[messageArray count] - 1] rangeOfString: [negativeMessage objectAtIndex:i]].location != NSNotFound) {
             NSLog(@"succcess");
-            score -= 5;
+            score -= 1;
         } else {
             NSLog(@"fail");
         }
     }
     NSLog(@"%d", score);
     [self httpGetComm];
+    [self showGuageImage];
     
     return YES;
 }
@@ -94,6 +116,15 @@ const int maxScore = 10;
      sendSynchronousRequest:urlRequest
      returningResponse:nil error:nil];
     //[[UIApplication sharedApplication] openURL:url];
+}
+
+- (void)showGuageImage {
+    for(int i = 0;i < 10;i++){
+        if(score == i){
+            NSString *imageName = [NSString stringWithFormat:@"gage0%d.png", i];
+            self.guageImageView.image = [UIImage imageNamed:imageName];
+        }
+    }
 }
 
 -(void) sendEmailInBackground

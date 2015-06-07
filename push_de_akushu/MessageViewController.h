@@ -12,6 +12,8 @@
 
 @interface MessageViewController : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate,SKPSMTPMessageDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *guageImageView;
 @property(nonatomic, strong) UITapGestureRecognizer *singleTap;
 
 @end
