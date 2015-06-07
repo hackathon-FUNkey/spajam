@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -121,7 +121,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-o9-TNu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-o9-TNu">
                                 <rect key="frame" x="0.0" y="0.0" width="680" height="632"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezt-Hs-YPG">
@@ -129,19 +129,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jti-9A-wps">
+                                <rect key="frame" x="194" y="164" width="212" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="HAD-Qh-hgQ"/>
+                                    <constraint firstAttribute="width" constant="212" id="P8a-lw-4lO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="centerY" secondItem="vci-Kh-wnY" secondAttribute="centerY" id="Dnc-DN-EtM"/>
                             <constraint firstAttribute="trailing" secondItem="Ezt-Hs-YPG" secondAttribute="trailing" id="HLO-QS-D9O"/>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="leading" secondItem="vci-Kh-wnY" secondAttribute="leading" id="Qzp-C5-rE1"/>
-                            <constraint firstItem="2oF-o9-TNu" firstAttribute="leading" secondItem="Ezt-Hs-YPG" secondAttribute="leading" id="UMm-mV-PT0"/>
+                            <constraint firstItem="Ezt-Hs-YPG" firstAttribute="top" secondItem="jti-9A-wps" secondAttribute="bottom" constant="8" symbolic="YES" id="Yat-10-OM0"/>
+                            <constraint firstItem="jti-9A-wps" firstAttribute="centerX" secondItem="Ezt-Hs-YPG" secondAttribute="centerX" id="jki-bj-yXS"/>
                             <constraint firstItem="2oF-o9-TNu" firstAttribute="top" secondItem="vci-Kh-wnY" secondAttribute="top" id="obZ-j2-Hn6"/>
                             <constraint firstAttribute="bottomMargin" secondItem="2oF-o9-TNu" secondAttribute="bottom" constant="-32" id="omw-Og-7rA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2oF-o9-TNu" secondAttribute="trailing" constant="-96" id="sqf-Qb-Qag"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myImageView" destination="jti-9A-wps" id="VZR-Ld-WDO"/>
                         <outlet property="myTextField" destination="Ezt-Hs-YPG" id="6v6-Fh-oHM"/>
                     </connections>
                 </viewController>

@@ -19,6 +19,7 @@ NSArray *positiveMessage;
 NSArray *negativeMessage;
 int score;
 const int maxScore = 10;
+NSArray *imageArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +33,24 @@ const int maxScore = 10;
     positiveMessage = [NSArray arrayWithObjects:@"ごめん", @"反省", @"仲直り", @"和解", nil];
     negativeMessage = [NSArray arrayWithObjects:@"嫌い", @"ない", @"ムカつく", @"この野郎", nil];
     score = 9;
+    
+    imageArray = [NSArray arrayWithObjects:@"move_hand00.png", @"move_hand01.png", @"move_hand02.png", @"move_hand03.png", @"move_hand04.png", @"move_hand05.png", nil];
+    
+    //UIImageを格納するNSMutableArrayを確保
+    NSMutableArray *uiImageArray = [NSMutableArray array];
+    //_imageArrayのイメージをuiImageArrayに追加
+    for(NSString *imageStr in imageArray) {
+        [uiImageArray addObject:[UIImage imageNamed:imageStr]];
+    }
+    
+    //self.myImageView.image = [UIImage imageNamed:@"move_hands00.png"];
+    
+    //uiImageArrayを_imageView.animationImagesにセット
+    self.myImageView.animationImages = uiImageArray;
+    self.myImageView.animationRepeatCount = 0;
+    self.myImageView.animationDuration = 1;
+    self.myImageView.userInteractionEnabled = YES;
+    [self.myImageView startAnimating];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)targetTextField {
