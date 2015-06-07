@@ -11,17 +11,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_kuro2.png" translatesAutoresizingMaskIntoConstraints="NO" id="JY5-IZ-ej9">
-                    <rect key="frame" x="103" y="316" width="208" height="103"/>
+                    <rect key="frame" x="142" y="336" width="131" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="103" id="8Jw-Fg-gtl"/>
-                        <constraint firstAttribute="width" constant="208" id="dM0-dl-yqm"/>
+                        <constraint firstAttribute="height" constant="64" id="i4j-T3-EZF"/>
+                        <constraint firstAttribute="width" constant="131" id="iaK-R4-43t"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="JY5-IZ-ej9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ARS-qZ-p7B"/>
-                <constraint firstItem="JY5-IZ-ej9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="316" id="vng-mK-qio"/>
+                <constraint firstAttribute="centerY" secondItem="JY5-IZ-ej9" secondAttribute="centerY" id="7lD-5z-LXj"/>
+                <constraint firstAttribute="centerX" secondItem="JY5-IZ-ej9" secondAttribute="centerX" id="dTh-dH-DKX"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
