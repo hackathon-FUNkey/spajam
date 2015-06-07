@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOg-hw-kG5">
-                                <rect key="frame" x="296" y="20" width="46" height="30"/>
+                                <rect key="frame" x="242" y="20" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292.5" y="339"/>
+            <point key="canvasLocation" x="246" y="345"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="Hgf-UY-h84">
@@ -205,12 +205,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-LE-oFU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="haikei_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="YKT-T4-Lob">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="656"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-LE-oFU">
+                                <rect key="frame" x="91" y="0.0" width="418" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="11" width="600" height="600"/>
+                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YKT-T4-Lob" firstAttribute="leading" secondItem="z1J-QJ-Dyl" secondAttribute="leadingMargin" id="6m0-iv-Jep"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YKT-T4-Lob" secondAttribute="bottom" constant="-51" id="AMe-rj-TTW"/>
+                            <constraint firstItem="YKT-T4-Lob" firstAttribute="top" secondItem="z1J-QJ-Dyl" secondAttribute="topMargin" constant="-5" id="Kvg-IM-4wS"/>
+                            <constraint firstItem="YKT-T4-Lob" firstAttribute="leading" secondItem="z1J-QJ-Dyl" secondAttribute="leadingMargin" id="LZl-Z4-Ic2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XFs-LE-oFU" secondAttribute="trailing" constant="30" id="Q0b-8U-e8b"/>
+                            <constraint firstItem="YKT-T4-Lob" firstAttribute="top" secondItem="z1J-QJ-Dyl" secondAttribute="topMargin" constant="-5" id="a8U-e5-nVc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YKT-T4-Lob" secondAttribute="trailing" constant="-16" id="cbz-Tc-sze"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YKT-T4-Lob" secondAttribute="trailing" constant="-16" id="eyD-Kj-51K"/>
+                            <constraint firstItem="XFs-LE-oFU" firstAttribute="leading" secondItem="z1J-QJ-Dyl" secondAttribute="leadingMargin" constant="30" id="n0X-Jm-UfI"/>
+                            <constraint firstItem="YKT-T4-Lob" firstAttribute="leading" secondItem="z1J-QJ-Dyl" secondAttribute="leadingMargin" constant="-16" id="odu-Xb-tqX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YKT-T4-Lob" secondAttribute="bottom" id="r2X-Jw-CRw"/>
+                            <constraint firstItem="Jzb-eG-AlK" firstAttribute="top" secondItem="XFs-LE-oFU" secondAttribute="bottom" id="tbn-Ip-bsM"/>
+                            <constraint firstItem="XFs-LE-oFU" firstAttribute="top" secondItem="z1J-QJ-Dyl" secondAttribute="topMargin" id="ysk-kJ-cIW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="XFs-LE-oFU" id="ncd-0q-2To"/>
