@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageCheckViewController : UIViewController
+@interface MessageCheckViewController : UIViewController<UITableViewDelegate,UITableViewDataSource> {
+
+}
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
