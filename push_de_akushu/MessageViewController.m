@@ -25,6 +25,8 @@ NSArray *imageArray;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.myTextField.delegate = self;
+    self.myTextField.placeholder = @"文字を入力してください";
+    
     self.singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSingleTap:)];
     self.singleTap.delegate = self;
     self.singleTap.numberOfTapsRequired = 1;
@@ -83,6 +85,8 @@ NSArray *imageArray;
     NSLog(@"%d", score);
     [self httpGetComm];
     [self showGuageImage];
+    
+    self.myTextField.text = @"";
     
     return YES;
 }
