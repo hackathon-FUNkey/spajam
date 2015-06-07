@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1JP-h0-uXE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -145,20 +145,46 @@
                                     <constraint firstAttribute="width" constant="212" id="P8a-lw-4lO"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zge-AE-AvR">
+                                <rect key="frame" x="16" y="40" width="568" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="7J9-9X-P2o"/>
+                                    <constraint firstAttribute="width" constant="393" id="kYz-Vc-zI2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7J9-9X-P2o"/>
+                                        <exclude reference="kYz-Vc-zI2"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="centerX" secondItem="jti-9A-wps" secondAttribute="centerX" id="1DH-nE-4Hj"/>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="centerY" secondItem="vci-Kh-wnY" secondAttribute="centerY" id="Dnc-DN-EtM"/>
                             <constraint firstAttribute="trailing" secondItem="Ezt-Hs-YPG" secondAttribute="trailing" id="HLO-QS-D9O"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="top" secondItem="IHB-bc-lWC" secondAttribute="bottom" constant="20" id="HRf-ov-Ga4"/>
+                            <constraint firstItem="jti-9A-wps" firstAttribute="top" secondItem="Zge-AE-AvR" secondAttribute="bottom" constant="77" id="HlO-3R-2Nv"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="top" secondItem="IHB-bc-lWC" secondAttribute="bottom" constant="20" id="QdE-vp-Ptk"/>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="leading" secondItem="vci-Kh-wnY" secondAttribute="leading" id="Qzp-C5-rE1"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="leading" secondItem="vci-Kh-wnY" secondAttribute="leadingMargin" id="TWg-BT-XpQ"/>
                             <constraint firstItem="Ezt-Hs-YPG" firstAttribute="top" secondItem="jti-9A-wps" secondAttribute="bottom" constant="8" symbolic="YES" id="Yat-10-OM0"/>
+                            <constraint firstItem="Zge-AE-AvR" firstAttribute="centerX" secondItem="jti-9A-wps" secondAttribute="centerX" id="b4D-58-qOH"/>
                             <constraint firstItem="jti-9A-wps" firstAttribute="centerX" secondItem="Ezt-Hs-YPG" secondAttribute="centerX" id="jki-bj-yXS"/>
                             <constraint firstItem="2oF-o9-TNu" firstAttribute="top" secondItem="vci-Kh-wnY" secondAttribute="top" id="obZ-j2-Hn6"/>
                             <constraint firstAttribute="bottomMargin" secondItem="2oF-o9-TNu" secondAttribute="bottom" constant="-32" id="omw-Og-7rA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2oF-o9-TNu" secondAttribute="trailing" constant="-96" id="sqf-Qb-Qag"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QdE-vp-Ptk"/>
+                                <exclude reference="b4D-58-qOH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="guageImageView" destination="Zge-AE-AvR" id="X5T-iC-7x7"/>
                         <outlet property="myImageView" destination="jti-9A-wps" id="VZR-Ld-WDO"/>
                         <outlet property="myTextField" destination="Ezt-Hs-YPG" id="6v6-Fh-oHM"/>
                     </connections>
