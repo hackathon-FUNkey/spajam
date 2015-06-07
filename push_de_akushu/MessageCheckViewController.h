@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MessageCheckViewController : UIViewController<UITableViewDelegate,UITableViewDataSource> {
-
+NSMutableArray *mtArray;
 }
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
