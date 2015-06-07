@@ -51,6 +51,8 @@ NSArray *imageArray;
     self.myImageView.animationDuration = 1;
     self.myImageView.userInteractionEnabled = YES;
     [self.myImageView startAnimating];
+    
+    [self showGuageImage];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)targetTextField {
@@ -73,13 +75,14 @@ NSArray *imageArray;
     for(int i = 0; i < [negativeMessage count]; i++) {
         if([[messageArray objectAtIndex:[messageArray count] - 1] rangeOfString: [negativeMessage objectAtIndex:i]].location != NSNotFound) {
             NSLog(@"succcess");
-            score -= 5;
+            score -= 1;
         } else {
             NSLog(@"fail");
         }
     }
     NSLog(@"%d", score);
     [self httpGetComm];
+    [self showGuageImage];
     
     return YES;
 }
@@ -113,6 +116,15 @@ NSArray *imageArray;
      sendSynchronousRequest:urlRequest
      returningResponse:nil error:nil];
     //[[UIApplication sharedApplication] openURL:url];
+}
+
+- (void)showGuageImage {
+    for(int i = 0;i < 10;i++){
+        if(score == i){
+            NSString *imageName = [NSString stringWithFormat:@"gage0%d.png", i];
+            self.guageImageView.image = [UIImage imageNamed:imageName];
+        }
+    }
 }
 
 -(void) sendEmailInBackground
