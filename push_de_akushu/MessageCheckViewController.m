@@ -92,7 +92,7 @@
             // Add the label
             UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0, 300.0, 60.0)];
             headerLabel.backgroundColor = [UIColor clearColor];
-            headerLabel.text = @"へっだー";
+            headerLabel.text = @"あなたが送ったメッセージ";
             headerLabel.textColor = [UIColor blackColor];
             headerLabel.highlightedTextColor = [UIColor whiteColor];
             
