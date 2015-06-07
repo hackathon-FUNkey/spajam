@@ -49,6 +49,7 @@
     myTableView.dataSource=self;
     myTableView.delegate=self;
     
+    myTableView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -130,8 +131,10 @@
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil){
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     }else{
         cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     }
     
     switch (indexPath.section) {
