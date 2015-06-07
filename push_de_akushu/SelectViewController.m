@@ -91,6 +91,24 @@
         // メールアドレスは1件だけ
         email = (__bridge NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
         NSLog(@"email = %@", email);
+        
+        NSString *urlAsString = @"http://124.24.56.247/createRequest.php";
+        //urlAsString = [urlAsString
+        //stringByAppendingString:@"?title=test1"];
+        NSString *send_email = [NSString stringWithFormat:@"?email=%@", email];
+        
+        urlAsString = [urlAsString stringByAppendingString:send_email];
+        NSLog(@"%@", urlAsString);
+        NSURL *url = [NSURL URLWithString:urlAsString];
+        
+        NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+        [urlRequest setTimeoutInterval:30.0f];
+        [urlRequest setHTTPMethod:@"GET"];
+        NSLog(@"GET");
+        [NSURLConnection
+         sendSynchronousRequest:urlRequest
+         returningResponse:nil error:nil];
+
       //  [self sendEmailInBackground];
         [self dismissModalViewControllerAnimated:YES];
         MessageViewController *messageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];

@@ -34,6 +34,7 @@
 		889401B61B22F4C5006DDE40 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889401B41B22F4C5006DDE40 /* AddressBookUI.framework */; };
 		8B1294BA1B2368FB00F84F64 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1294B91B2368FB00F84F64 /* MessageViewController.m */; };
 		8B1294C31B23C66E00F84F64 /* MessageCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1294C21B23C66E00F84F64 /* MessageCheckViewController.m */; };
+		8B1294C71B23D7E600F84F64 /* logo_kuro2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1294C61B23D7E600F84F64 /* logo_kuro2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		8B1294B91B2368FB00F84F64 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		8B1294C11B23C66E00F84F64 /* MessageCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCheckViewController.h; sourceTree = "<group>"; };
 		8B1294C21B23C66E00F84F64 /* MessageCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCheckViewController.m; sourceTree = "<group>"; };
+		8B1294C61B23D7E600F84F64 /* logo_kuro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_kuro2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		8831508D1B23507A00B8B12F /* image */ = {
 			isa = PBXGroup;
 			children = (
+				8B1294C61B23D7E600F84F64 /* logo_kuro2.png */,
 				883150981B239FC100B8B12F /* rogo_test_black.png */,
 				8831509A1B23A21F00B8B12F /* haikei_menu_2.png */,
 				8831509B1B23A21F00B8B12F /* sorry_test.png */,
@@ -315,6 +318,7 @@
 				8831509D1B23A21F00B8B12F /* sorry_test.png in Resources */,
 				883150931B23507A00B8B12F /* send_line_test.png in Resources */,
 				883150951B23507A00B8B12F /* top.png in Resources */,
+				8B1294C71B23D7E600F84F64 /* logo_kuro2.png in Resources */,
 				4A4305811B22CEA8006432CB /* LaunchScreen.xib in Resources */,
 				4A43057E1B22CEA8006432CB /* Images.xcassets in Resources */,
 				883150B21B23B21700B8B12F /* SVProgressHUD.bundle in Resources */,
