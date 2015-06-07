@@ -43,6 +43,7 @@
 		883150B21B23B21700B8B12F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 883150AE1B23B21700B8B12F /* SVProgressHUD.bundle */; };
 		883150B31B23B21700B8B12F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 883150B01B23B21700B8B12F /* SVProgressHUD.m */; };
 		883150BC1B23F35300B8B12F /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 883150BB1B23F35300B8B12F /* mail.png */; };
+		883150BE1B23FB0700B8B12F /* haikei_nyuuryoku.png in Resources */ = {isa = PBXBuildFile; fileRef = 883150BD1B23FB0700B8B12F /* haikei_nyuuryoku.png */; };
 		889401AE1B22EDA4006DDE40 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A51B22EDA4006DDE40 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401AF1B22EDA4006DDE40 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A71B22EDA4006DDE40 /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		889401B01B22EDA4006DDE40 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 889401A91B22EDA4006DDE40 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -112,6 +113,7 @@
 		883150AF1B23B21700B8B12F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		883150B01B23B21700B8B12F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		883150BB1B23F35300B8B12F /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		883150BD1B23FB0700B8B12F /* haikei_nyuuryoku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haikei_nyuuryoku.png; sourceTree = "<group>"; };
 		889401A41B22EDA4006DDE40 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
 		889401A51B22EDA4006DDE40 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
 		889401A61B22EDA4006DDE40 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		8831508D1B23507A00B8B12F /* image */ = {
 			isa = PBXGroup;
 			children = (
+				883150BD1B23FB0700B8B12F /* haikei_nyuuryoku.png */,
 				883150BB1B23F35300B8B12F /* mail.png */,
 				8B1294C61B23D7E600F84F64 /* logo_kuro2.png */,
 				883150981B239FC100B8B12F /* rogo_test_black.png */,
@@ -384,6 +387,7 @@
 				4A4305E41B23D48A006432CB /* gage05.png in Resources */,
 				4A4305E01B23D48A006432CB /* gage01.png in Resources */,
 				4A4305E61B23D48A006432CB /* gage07.png in Resources */,
+				883150BE1B23FB0700B8B12F /* haikei_nyuuryoku.png in Resources */,
 				883150991B239FC100B8B12F /* rogo_test_black.png in Resources */,
 				4A4305E11B23D48A006432CB /* gage02.png in Resources */,
 				8831509C1B23A21F00B8B12F /* haikei_menu_2.png in Resources */,
