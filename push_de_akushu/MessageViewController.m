@@ -136,7 +136,7 @@ NSArray *imageArray;
     NSLog(@"Start Sending");
     [SVProgressHUD show];
     [SVProgressHUD showWithStatus:@"メール送信中・・・" maskType:SVProgressHUDMaskTypeGradient];
-
+    
     SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
     emailMessage.fromEmail = @"pushdeakushu@gmail.com"; //送信者メールアドレス（Gmailのアカウント）
     emailMessage.toEmail = @"b1012187@fun.ac.jp";                //宛先メールアドレス
@@ -149,14 +149,18 @@ NSArray *imageArray;
     emailMessage.login = @"pushdeakushu@gmail.com";         //ユーザ名（Gmailのアカウント）
     emailMessage.pass = @"funkey123";                       //パスワード（Gmailのアカウント）
     //2段階認証プロセスを利用する場合、アプリパスワードを使用する
-    emailMessage.subject =@"件名に記載する内容";
+    emailMessage.subject =@"あなたと仲直りしたい人がいます";
     emailMessage.wantsSecure = YES;
     emailMessage.delegate = self;
-    NSString *messageBody = @"メール本文に記載する内容";
+    NSString *name =@"河辺";
+    NSString *str3 = [name stringByAppendingString:@"さんが仲直りしたいと言っています。あなたも仲直りしたい場合はリンク先のボタンを押して下さい。\n ↓↓↓↓↓ \n "];
+    NSString *str4 = [str3 stringByAppendingString:@"http://124.24.56.247/request.php?reqnum=2"];
+    NSString *messageBody = str4;
     NSDictionary *plainMsg = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey, messageBody,kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
     emailMessage.parts = [NSArray arrayWithObjects:plainMsg,nil];
     [emailMessage send];
 }
+
 
 // E-Mail送信成功時にCallされる（成功時の処理をコーディングする）
 -(void)messageSent:(SKPSMTPMessage *)message

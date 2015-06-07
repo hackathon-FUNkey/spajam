@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -32,13 +32,13 @@
                                     <segue destination="A8z-x3-CKL" kind="presentation" id="1XI-bz-E5a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOg-hw-kG5">
-                                <rect key="frame" x="242" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2D-Ov-C1g">
+                                <rect key="frame" x="527" y="30" width="41" height="27"/>
+                                <state key="normal" image="mail.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3zB-rm-Ijv" kind="presentation" id="YZF-9D-CYk"/>
+                                    <segue destination="3zB-rm-Ijv" kind="presentation" id="vcf-CJ-VlE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,9 +47,11 @@
                             <constraint firstItem="vbC-rQ-ECm" firstAttribute="centerX" secondItem="E3z-ds-usW" secondAttribute="centerX" id="1Mf-rm-Nz7"/>
                             <constraint firstItem="vbC-rQ-ECm" firstAttribute="top" secondItem="y9q-v0-Sbo" secondAttribute="bottom" constant="10" id="1U9-8M-oPI"/>
                             <constraint firstItem="ORV-TU-fnc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-21" id="5NG-9b-DUR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m2D-Ov-C1g" secondAttribute="trailing" constant="10" id="CZ4-ct-ekh"/>
                             <constraint firstItem="vbC-rQ-ECm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="3" id="Lgf-Z8-TVm"/>
                             <constraint firstItem="ORV-TU-fnc" firstAttribute="bottom" secondItem="DrK-1Z-83J" secondAttribute="top" id="Xac-Hp-ev0"/>
                             <constraint firstItem="DrK-1Z-83J" firstAttribute="top" secondItem="vbC-rQ-ECm" secondAttribute="bottom" constant="97" id="dE1-ne-Mfs"/>
+                            <constraint firstItem="m2D-Ov-C1g" firstAttribute="top" secondItem="y9q-v0-Sbo" secondAttribute="bottom" constant="23" id="eHC-KI-Hlx"/>
                             <constraint firstItem="E3z-ds-usW" firstAttribute="top" secondItem="y9q-v0-Sbo" secondAttribute="bottom" constant="356" id="pCK-Hu-vSX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ORV-TU-fnc" secondAttribute="trailing" constant="-17" id="pM2-ft-rug"/>
                             <constraint firstItem="ORV-TU-fnc" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="uWk-7X-gVs"/>
@@ -60,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="345"/>
+            <point key="canvasLocation" x="212" y="361"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="Hgf-UY-h84">
@@ -246,6 +248,7 @@
     <resources>
         <image name="haikei_4.png" width="750" height="1334"/>
         <image name="haikei_menu_2.png" width="750" height="1334"/>
+        <image name="mail.png" width="40" height="27"/>
         <image name="rogo_test_black.png" width="750" height="1334"/>
         <image name="send_line_test.png" width="400" height="200"/>
         <image name="send_mails_test.png" width="400" height="200"/>
